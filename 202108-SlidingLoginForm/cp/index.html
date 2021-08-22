@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Responsive Sliding Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="blue-bg">
+            <div class="box signin">
+                <h2>Already Have an Account ?</h2>
+                <button class="to-signin-btn">sign in</button>
+            </div>
+            <div class="box signun">
+                <h2>Don't Have an Account ?</h2>
+                <button class="to-signup-btn">Sign up</button>
+            </div>
+        </div>
+        <div class="form-box">
+            <div class="form signin-form">
+                <form>
+                    <h3>Sign In</h3>
+                    <input type="text" name="" placeholder="Username">
+                    <input type="password" name="" placeholder="Password">
+                    <input type="submit" name="" value="Login">
+                    <a href="#" class="forgot">Forgot Password</a>
+                </form>
+            </div>
+            <div class="form signup-form">
+                <form>
+                    <h3>Sign Up</h3>
+                    <input type="text" name="" placeholder="Username">
+                    <input type="text" name="" placeholder="Email Address">
+                    <input type="password" name="" placeholder="Password">
+                    <input type="password" name="" placeholder="Confirm Password">
+                    <input type="submit" name="" value="Register">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const toSigninBtn = document.querySelector(".to-signin-btn")
+        const toSignupBtn = document.querySelector(".to-signup-btn")
+        const body = document.querySelector("body")
+        const formBox = document.querySelector(".form-box")
+
+        toSignupBtn.onclick = function(event) {
+            formBox.classList.add("active")
+            body.classList.add("active")
+        }
+        toSigninBtn.onclick = function(event) {
+            formBox.classList.remove("active")
+            body.classList.remove("active")
+        }
+    </script>
+</body>
+
+</html>
