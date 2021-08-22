@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Responsive Sliding Form</title>
+</head>
+<body class="signin">
+  <div class="container">
+    <div class="bg-box">
+      <div class="box signin-bg">
+        <h2>Already Have an Account ?</h2>
+        <button class="to-signin-btn">Sign in</button>
+      </div>
+      <div class="box signup-bg">
+        <h2>Don't Have an Account ?</h2>
+        <button class="to-signup-btn">Sign up</button>
+      </div>
+    </div>
+    <div class="form-box signin">
+      <div class="signin-form">
+        <form>
+          <h3>Sign in</h3>
+          <input type="text" name="" placeholder="Username">
+          <input type="password" name="" placeholder="Password">
+          <input type="submit" name="" value="Login">
+          <a href="#">Forgot password</a>
+        </form>
+      </div>
+      <div class="signup-form">
+        <form>
+          <h3>Sign up</h3>
+          <input type="text" name="" placeholder="Username">
+          <input type="text" name="" placeholder="Email">
+          <input type="password" name="" placeholder="Password">
+          <input type="password" name="" placeholder="Confirm Password">
+          <input type="submit" name="" value="Register">
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    const toSigninBtn = document.querySelector(".to-signin-btn")
+    const toSignupBtn = document.querySelector(".to-signup-btn")
+    const formBox = document.querySelector(".form-box")
+    const body = document.querySelector("body")
+
+    toSigninBtn.onclick = function(event) {
+      body.classList.replace("signup", "signin")
+      formBox.classList.replace("signup", "signin")
+    }
+    toSignupBtn.onclick = function(event) {
+      body.classList.replace("signin", "signup")
+      formBox.classList.replace("signin", "signup")
+    }
+  </script>
+</body>
+</html>

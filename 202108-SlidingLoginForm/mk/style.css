@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body.signin {
+  background-color: #03a9f4;
+}
+
+body.signup {
+  background-color: #f43648;
+}
+
+.container {
+  position: absolute;
+  height: 500px;
+  width: 800px;
+  display: flex;
+  align-items: center;
+}
+
+.bg-box {
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  height: 420px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: rgba(256, 256, 256, 0.2);
+  box-shadow: 0px 5px 45px rgb(0 0 0 / 15%);
+}
+
+.bg-box .box {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.bg-box .box h2 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.bg-box .box button {
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+
+.form-box {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0px 5px 45px rgb(0 0 0 / 25%);
+}
+
+.form-box .signin-form,
+.form-box .signup-form {
+  width: 100%;
+  position: absolute;
+  padding: 50px;
+  transition: 0.5s ease-out;
+}
+
+.form-box form {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.form-box form h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-box form input {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  border: 1px solid #333;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.form-box form input[type="submit"] {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.form-box .signin-form form input[type="submit"] {
+  background-color: #03a9f4;
+}
+
+.form-box .signup-form form input[type="submit"] {
+  background-color: #f43648;
+}
+
+.form-box .signin-form form a {
+  color: #333;
+}
+
+.form-box.signin {
+  left: 0;
+}
+
+.form-box.signup {
+  left: 50%;
+}
+
+.form-box.signin .signup-form {
+  left: 100%;
+}
+
+.form-box.signin .signin-form,
+.form-box.signup .signup-form {
+  left: 0;
+  transition-delay: 0.25s;
+}
+
+.form-box.signup .signin-form {
+  left: -100%;
+}
