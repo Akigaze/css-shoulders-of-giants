@@ -5,39 +5,31 @@
 }
 
 body {
-  transition: 0.5s;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-}
-
-body.signin {
-  background-color: #03a9f4;
-}
-
-body.signup {
-  background-color: #f43648;
+  transition: 0.5s;
 }
 
 .container {
-  position: absolute;
   height: 500px;
   width: 800px;
+  position: absolute;
   display: flex;
   align-items: center;
 }
 
 .bg-box {
-  position: absolute;
+  height: 420px;
+  width: 100%;
+  border-radius: 8px;
   z-index: 100;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row nowrap;
-  height: 420px;
-  width: 100%;
-  border-radius: 8px;
   background-color: rgba(256, 256, 256, 0.2);
   box-shadow: 0px 5px 45px rgb(0 0 0 / 15%);
 }
@@ -71,23 +63,23 @@ body.signup {
 .form-box {
   width: 50%;
   height: 100%;
+  border-radius: 8px;
+  z-index: 1000;
   overflow: hidden;
   position: absolute;
   top: 0;
-  z-index: 1000;
   display: flex;
   align-items: center;
   background-color: #fff;
-  border-radius: 8px;
-  transition: 0.5s ease-in-out;
   box-shadow: 0px 5px 45px rgb(0 0 0 / 25%);
+  transition: 0.5s ease-in-out;
 }
 
 .form-box .signin-form,
 .form-box .signup-form {
   width: 100%;
-  position: absolute;
   padding: 50px;
+  position: absolute;
   transition: 0.5s ease-out;
 }
 
@@ -107,20 +99,17 @@ body.signup {
   font-size: 16px;
   font-weight: 500;
   color: #333;
-  border: 1px solid #333;
-  outline: none;
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 4px;
+  border: 1px solid #333;
+  outline: none;
 }
 
 .form-box form input[type="submit"] {
-  font-size: 16px;
-  font-weight: 500;
   color: #fff;
-  border: none;
-  padding: 10px;
   width: 100px;
+  border: none;
   cursor: pointer;
 }
 
@@ -134,6 +123,14 @@ body.signup {
 
 .form-box .signin-form form a {
   color: #333;
+}
+
+body.signin {
+  background-color: #03a9f4;
+}
+
+body.signup {
+  background-color: #f43648;
 }
 
 .form-box.signin {
